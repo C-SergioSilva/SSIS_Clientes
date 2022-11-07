@@ -2,13 +2,18 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>ProjetoClientes</Name>
-    <LastWriteTime>2022-11-04T14:03:04.0132461Z</LastWriteTime>
+    <LastWriteTime>2022-11-07T18:23:10.6832317Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Clientes.dtsx</Name>
-      <LastWriteTime>2022-11-04T14:02:13.6121592Z</LastWriteTime>
+      <LastWriteTime>2022-11-07T18:01:01.0376532Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ClienteBanco.dtsx</Name>
+      <LastWriteTime>2022-11-07T18:23:10.6553078Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

@@ -11,22 +11,34 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="Clientes"
   DTS:PackageType="5"
-  DTS:VersionBuild="5"
-  DTS:VersionGUID="{8503CA81-F361-411E-9FAD-DC4E22D74F4A}">
+  DTS:VersionBuild="6"
+  DTS:VersionGUID="{3DA4DE80-8EE5-4D46-977A-61C794E6CEC6}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[FFC_Clientes]"
+      DTS:refId="Package.ConnectionManagers[PRJ_SSIS]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5BE722F9-63BF-476E-AB80-AA1B4CB61F7E}"
+      DTS:ObjectName="PRJ_SSIS">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=GMS\SQLEXPRESS;Initial Catalog=PRJ_SSIS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[WR_Clientes]"
       DTS:CreationName="FLATFILE"
-      DTS:Description="Conecta ao Arquivo de clientes"
-      DTS:DTSID="{756B3F03-A0D4-4C62-BEC9-486301EDD8C0}"
-      DTS:ObjectName="FFC_Clientes">
+      DTS:DTSID="{75755824-DEE8-4D68-9E16-B3241B93B3BF}"
+      DTS:ObjectName="WR_Clientes">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:Format="Delimited"
           DTS:LocaleID="1046"
           DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
@@ -38,7 +50,7 @@
               DTS:DataType="3"
               DTS:TextQualified="True"
               DTS:ObjectName="IDCliente"
-              DTS:DTSID="{96824C42-2591-4421-9410-526897C19DB8}"
+              DTS:DTSID="{0A3A0A12-6292-4264-9D5C-F7E1CF64F1FF}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -47,7 +59,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Nome"
-              DTS:DTSID="{4F859F33-8D8F-48B5-83F4-43FC296F54E4}"
+              DTS:DTSID="{847501A3-DA3F-4BB4-AEDF-5431051DAC1F}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -56,7 +68,7 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Sexo"
-              DTS:DTSID="{B6FBE99B-5F35-4277-BA41-D91EDE7ECEFA}"
+              DTS:DTSID="{A20E2CD9-C972-4640-B93A-EFE5A2982D09}"
               DTS:CreationName="" />
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -65,22 +77,10 @@
               DTS:DataType="129"
               DTS:TextQualified="True"
               DTS:ObjectName="Email"
-              DTS:DTSID="{930E228D-B436-4809-8D53-9B2039700153}"
+              DTS:DTSID="{458BC776-BCFA-4A91-9FB4-E2D7A43A081D}"
               DTS:CreationName="" />
           </DTS:FlatFileColumns>
         </DTS:ConnectionManager>
-      </DTS:ObjectData>
-    </DTS:ConnectionManager>
-    <DTS:ConnectionManager
-      DTS:refId="Package.ConnectionManagers[PRJ_SSIS]"
-      DTS:CreationName="OLEDB"
-      DTS:DTSID="{5BE722F9-63BF-476E-AB80-AA1B4CB61F7E}"
-      DTS:ObjectName="PRJ_SSIS">
-      <DTS:ObjectData>
-        <DTS:ConnectionManager
-          DTS:ConnectRetryCount="1"
-          DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=GMS\SQLEXPRESS;Initial Catalog=PRJ_SSIS;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -126,8 +126,8 @@
               <connections>
                 <connection
                   refId="Package\DF_Clientes\FF_Clientes.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[FFC_Clientes]"
-                  connectionManagerRefId="Package.ConnectionManagers[FFC_Clientes]"
+                  connectionManagerID="Package.ConnectionManagers[WR_Clientes]"
+                  connectionManagerRefId="Package.ConnectionManagers[WR_Clientes]"
                   name="FlatFileConnection" />
               </connections>
               <inputs>
